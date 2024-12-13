@@ -11,7 +11,22 @@ public class Book extends LibraryItem {
         this.author=author;
         this.ebookYesNo=ebookYesNo;
         this.publisher=publisher;
-
     }
 
+    protected String getAuthor(){
+        return author;
+    }
+
+    protected String getBookFromat() {
+        return ebookYesNo ? "Ebook" : "Physical";
+    }
+
+    protected String getPublisher(){
+        return publisher;
+    }
+
+    @Override
+    protected String getType(){
+        return "Book";
+    }
 }

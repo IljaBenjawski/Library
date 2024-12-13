@@ -1,6 +1,6 @@
 package Library;
 
-public class LibraryItem {
+public abstract class LibraryItem {
     protected int id;
     protected String title;
     protected int year;
@@ -17,4 +17,37 @@ public class LibraryItem {
         this.checked_out=checked_out;
 
        }
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getShelf() {
+        return shelf;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public boolean isCheckedOut() {
+        return checked_out;
+    }
+
+    public void setCheckedOut(boolean checkedOut) {
+        checked_out = checkedOut;
+    }
+
+    protected abstract String getType();
+
+
 }
+
+
