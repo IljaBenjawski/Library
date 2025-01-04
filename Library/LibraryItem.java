@@ -46,7 +46,7 @@ public abstract class LibraryItem {
     }
 
     protected abstract String getType();
-
+    protected abstract String getFullObject();
 
 }
 

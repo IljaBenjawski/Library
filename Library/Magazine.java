@@ -15,7 +15,10 @@ public class Magazine extends LibraryItem{
         this.publisher = publisher;
     }
     @Override
+    protected String getFullObject(){
+          return "ID: "+id+" Title: "+title+" Publisher: "+publisher+" Year: "+year+ "Shelf: "+shelf+" Availabel: "+checked_out;
+    }
     protected String getType(){
-        return "Magazine";
+        return "magazine";
     }
 }

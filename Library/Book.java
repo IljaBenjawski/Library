@@ -26,7 +26,11 @@ public class Book extends LibraryItem {
     }
 
     @Override
+    protected String getFullObject(){
+        return "ID: "+id+" Title: "+title+" Author: "+author+" Year: "+year+ "Shelf: "+shelf+" Availabel: "+checked_out;
+    }
+
     protected String getType(){
-        return "Book";
+        return "book";
     }
 }

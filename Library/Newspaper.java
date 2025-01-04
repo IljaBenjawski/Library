@@ -13,8 +13,11 @@ public class Newspaper extends LibraryItem{
         return publicationDate;
     }
     @Override
+    protected String getFullObject(){
+        return "ID: "+id+" Title: "+title+" Date of publication : "+publicationDate+" Year: "+year+ "Shelf: "+shelf+" Availabel: "+checked_out;
+    }
     protected String getType(){
-        return "Newspaper";
+        return "newspaper";
     }
 
 }
