@@ -4,18 +4,23 @@ public class Newspaper extends LibraryItem{
 
     protected String publicationDate;
 
-    public Newspaper(int id, String title, int year, String shelf,String tags, boolean checked_out, String publicationDate){
+    public Newspaper(int id, String title, int year, String shelf,String tags, boolean checked_out){
         super( id,  title,  year,  shelf,  tags,checked_out);
-        this.publicationDate = publicationDate;
     }
 
-    protected String getPublicationDate() {
-        return publicationDate;
+    protected String getCheckout() {
+        return checked_out ? "Not Available" : "Available";
     }
+
     @Override
-    protected String getFullObject(){
-        return "ID: "+id+" Title: "+title+" Date of publication : "+publicationDate+" Year: "+year+ "Shelf: "+shelf+" Availabel: "+checked_out;
+    protected String getFullObject() {
+        return "ID: " + id + " | " +
+                "Title: " + title + " | " +
+                "Year: " + year + " | " +
+                "Shelf: " + shelf + " | " +
+                "Available: " + getCheckout();
     }
+
     protected String getType(){
         return "newspaper";
     }

@@ -16,7 +16,12 @@ public class Magazine extends LibraryItem{
     }
     @Override
     protected String getFullObject(){
-          return "ID: "+id+" Title: "+title+" Publisher: "+publisher+" Year: "+year+ "Shelf: "+shelf+" Availabel: "+checked_out;
+          return "ID: "+ id + " | " +
+                  "Title: "+ title + " | " +
+                  "Publisher: "+ publisher + " | " +
+                  "Year: "+ year + " | " +
+                  "Shelf: "+ shelf + " | " +
+                  "Availabel: "+checked_out;
     }
     protected String getType(){
         return "magazine";

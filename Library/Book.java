@@ -13,21 +13,19 @@ public class Book extends LibraryItem {
         this.publisher=publisher;
     }
 
-    protected String getAuthor(){
-        return author;
-    }
-
     protected String getBookFromat() {
         return ebookYesNo ? "Ebook" : "Physical";
     }
 
-    protected String getPublisher(){
-        return publisher;
-    }
-
     @Override
     protected String getFullObject(){
-        return "ID: "+id+" Title: "+title+" Author: "+author+" Year: "+year+ "Shelf: "+shelf+" Availabel: "+checked_out;
+        return "ID: "+ id + " | " +
+                "Title: "+ title + " | " +
+                "Author: "+ author + " | " +
+                "Year: "+ year + " | " +
+                "Shelf: "+ shelf + "| " +
+                "Cover: "+ getBookFromat() + " | " +
+                "Availabel: "+checked_out;
     }
 
     protected String getType(){
