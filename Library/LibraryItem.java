@@ -17,33 +17,32 @@ public abstract class LibraryItem {
         this.checked_out=checked_out;
 
        }
+    protected String checker(){
+        return checked_out ? "yes" : "not";
+    }
+
     public int getId() {
         return id;
     }
 
-    public String getTitle() {
-        return title;
+    public void checkOut() {
+        if (!checked_out) {
+            System.out.println("Item " + id + " checked out successfully.");
+            checked_out = true;
+        } else {
+            System.out.println("Item " + id + " is already checked out.");
+        }
     }
 
-    public int getYear() {
-        return year;
+    public void returnItem() {
+        if (checked_out) {
+            System.out.println("Item " + id + " returned successfully.");
+            checked_out = false;
+        } else {
+            System.out.println("Item " + id + " was not checked out.");
+        }
     }
 
-    public String getShelf() {
-        return shelf;
-    }
-
-    public String getTags() {
-        return tags;
-    }
-
-    public boolean isCheckedOut() {
-        return checked_out;
-    }
-
-    public void setCheckedOut(boolean checkedOut) {
-        checked_out = checkedOut;
-    }
 
     protected abstract String getType();
     protected abstract String getFullObject();

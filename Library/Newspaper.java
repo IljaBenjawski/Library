@@ -8,17 +8,13 @@ public class Newspaper extends LibraryItem{
         super( id,  title,  year,  shelf,  tags,checked_out);
     }
 
-    protected String getCheckout() {
-        return checked_out ? "Not Available" : "Available";
-    }
-
     @Override
     protected String getFullObject() {
         return "ID: " + id + " | " +
                 "Title: " + title + " | " +
                 "Year: " + year + " | " +
                 "Shelf: " + shelf + " | " +
-                "Available: " + getCheckout();
+                "Available: " + checker();
     }
 
     protected String getType(){

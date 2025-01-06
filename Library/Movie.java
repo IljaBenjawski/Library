@@ -1,15 +1,15 @@
 package Library;
-import java.util.Scanner;
-//DVD STREAMING Usw
 public class Movie extends LibraryItem{
     protected String director;
     protected String device;
 
-    public Movie(int id, String title, int year, String shelf,String tags, boolean checked_out, String director){
+    public Movie(int id, String title, int year, String shelf,String tags, boolean checked_out, String director, String device){
         super( id,  title,  year,  shelf,  tags,checked_out );
         this.director = director;
+        this.device =device;
 
     }
+
 
     @Override
     protected String getFullObject(){
@@ -18,7 +18,8 @@ public class Movie extends LibraryItem{
                 "Director: "+ director + " | " +
                 "Year: "+ year + " | " +
                 "Shelf: "+ shelf + " | " +
-                "Availabel: "+checked_out;
+                "Device: "+ device + " | " +
+                "Availabel: "+checker();
     }
     protected String getType(){
         return "movie";

@@ -7,13 +7,6 @@ public class Magazine extends LibraryItem{
         super( id,  title,  year,  shelf,  tags, checked_out);
         this.publisher=publisher;
     }
-    protected String getPublisher(){
-        return publisher;
-    }
-
-    protected void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
     @Override
     protected String getFullObject(){
           return "ID: "+ id + " | " +
@@ -21,7 +14,7 @@ public class Magazine extends LibraryItem{
                   "Publisher: "+ publisher + " | " +
                   "Year: "+ year + " | " +
                   "Shelf: "+ shelf + " | " +
-                  "Availabel: "+checked_out;
+                  "Availabel: "+checker();
     }
     protected String getType(){
         return "magazine";

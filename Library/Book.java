@@ -25,7 +25,7 @@ public class Book extends LibraryItem {
                 "Year: "+ year + " | " +
                 "Shelf: "+ shelf + "| " +
                 "Cover: "+ getBookFromat() + " | " +
-                "Availabel: "+checked_out;
+                "Availabel: "+checker();
     }
 
     protected String getType(){
