@@ -129,7 +129,7 @@ public class LibrarySystem{
                     break;
 
                 case "4":
-                case "exit":
+                case "quit":
                     System.out.println("Thank you bye bye");
                     return;
                 default:
