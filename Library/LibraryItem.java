@@ -18,7 +18,7 @@ public abstract class LibraryItem {
 
        }
     protected String checker(){
-        return checked_out ? "yes" : "not";
+        return checked_out ? "no" : "yes";
     }
 
     public int getId() {

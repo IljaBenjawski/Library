@@ -21,7 +21,6 @@ public class LibrarySystem{
 
         Scanner scanner = new Scanner(System.in);
 
-         boolean condition = true;
 
         while (true){
             System.out.println("\nLibrary Item Menu");
@@ -33,11 +32,12 @@ public class LibrarySystem{
             String choice = scanner.nextLine();
             switch (choice){
                 case "1":
+                    boolean condition=true;
                     while (condition) {
-                        System.out.print("\nHow to search:\nsearch (example: 'search book java' or 'search any java')\nor type quit to go back to the menu: ");
+                        System.out.print("\nHow to search:\nsearch (example: 'search book java' or 'search any java')\nor type back to go back to the menu: ");
                         String input = scanner.nextLine().trim();
 
-                        if (input.equalsIgnoreCase("quit")) {
+                        if (input.equalsIgnoreCase("back")) {
                             condition = false;
                         } else {
                             ArrayList<LibraryItem> result = new ArrayList<>();
